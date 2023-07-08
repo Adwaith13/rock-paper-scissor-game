@@ -66,3 +66,74 @@ body{
     font-weight: bolder;
     letter-spacing: 1.7px;
 }
+
+.play-area{
+    margin-top: 80px;
+}
+.rock{
+    margin-left: 35vw;
+    display: inline;
+}
+
+.scissor{
+    margin-left: 15vw;
+    display: inline;
+}
+
+.paper{
+    margin-left: 46.5vw;
+    margin-top: 11vh;
+}
+
+#rock-btn{
+    padding: 12px 4px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid #0074B6;
+    cursor: pointer;
+}
+
+#scissor-btn{
+    padding: 12px 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid #BD00FF;
+    cursor: pointer;
+}
+
+#paper-btn{
+    padding: 8px 10px;
+    border-radius: 50%;
+    background-color: white;
+    border: 10px solid #FFA943;
+    cursor: pointer;
+}
+
+#rules{
+    float: right;
+    margin-right: 10px;
+    color: white;
+    padding: 5px 12px;
+    background-color:#8CC461;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#next{
+    float: right;
+    color: white;
+    padding: 5px 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color:#8CC461;
+    font-size: 21px;
+    font-weight: 600;
+    letter-spacing: 2.1px;
+    border: 2px solid white;
+    border-radius: 10px;
+    cursor: pointer;
+}
