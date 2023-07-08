@@ -4,6 +4,12 @@ const paperBtn = document.getElementById("paper-btn");
 const resultElement = document.getElementById("result");
 const computerScoreElement = document.getElementById("score-computer");
 const userScoreElement = document.getElementById("score-user");
+const rulesButton = document.getElementById("rules");
+const popupBanner = document.getElementById("popup-banner");
+const popupContent = document.getElementById("popup-content");
+const closeBtn = document.getElementById("close-btn");
+const nextButton = document.getElementById("next");
+const playAgainButton = document.getElementById("play-again");
 
 //storing score in localstorage
 let computerScore = localStorage.getItem("computerScore") || 0;
@@ -29,9 +35,14 @@ function determineWinner(userChoice, computerChoice) {
     (userChoice === "scissor" && computerChoice === "paper") ||
     (userChoice === "paper" && computerChoice === "rock")
   ) {
-    return "You win!"
+    userScore++;
+    if(userScore>0){
+      nextButton.style.display = "block";
+    }
+    resultElement.innerHTML= "YOU WON AGAINST PC!";
   } else {
-    return "Computer wins!"
+    computerScore++;
+    resultElement.innerHTML= "YOU LOST AGAINST PC";
   }
 }
 
@@ -39,29 +50,54 @@ function determineWinner(userChoice, computerChoice) {
 function handleUserChoice(userChoice) {
   // Generate computer's choice
   const computerChoice = generateComputerChoice();
-
   const result = determineWinner(userChoice, computerChoice);
 
-
-  // Update the scores
-  if (result === "You win!") {
-    userScore++;
-    resultElement.innerHTML= "YOU WON AGAINST PC!";
-  } else if (result === "Computer wins!") {
-    computerScore++;
-    resultElement.innerHTML= "YOU LOST AGAINST PC";
-  }
-
-  // Update the scores on the page
   computerScoreElement.textContent = computerScore;
   userScoreElement.textContent = userScore;
 
   // Store the scores in local storage
   localStorage.setItem("computerScore", computerScore);
   localStorage.setItem("userScore", userScore);
+  playAgainButton.style.display = "block";
 }
 
 // Add event listeners to buttons
 rockBtn.addEventListener("click", () => handleUserChoice("rock"));
 scissorBtn.addEventListener("click", () => handleUserChoice("scissor"));
 paperBtn.addEventListener("click", () => handleUserChoice("paper"));
+
+rulesButton.addEventListener("click", () => {
+    popupBanner.style.display = "block";
+  });
+  
+  // Event listener for the close button
+  closeBtn.addEventListener("click", () => {
+    popupBanner.style.display = "none";
+  });
+  
+
+  nextButton.addEventListener("click", () => {
+    if (userScore > 0) {
+      window.location.href = "win.html";
+    }
+  });
+  function handlePlayAgain() {
+    // Reset the scores to 0
+    computerScore = 0;
+    userScore = 0;
+  
+    // Update the scores on the page
+    computerScoreElement.textContent = computerScore;
+    userScoreElement.textContent = userScore;
+  
+    // Hide the "PLAY AGAIN" button
+    playAgainButton.style.display = "none";
+    
+    // Show the user's choice buttons
+    rockBtn.style.display = "inline-block";
+    scissorBtn.style.display = "inline-block";
+    paperBtn.style.display = "inline-block";
+  
+    // Clear the result
+    resultElement.textContent = "";
+  }
