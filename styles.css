@@ -44,7 +44,12 @@ body{
     align-items: center;
     border-radius: 10px;
 }
-
+#score-computer,#score-user{
+    color: #252525;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 700;
+}
 #comp-score{
     color: #656565;
     font-size: 17px;
@@ -68,21 +73,32 @@ body{
 }
 
 .play-area{
+    margin-left: 40px;
     margin-top: 80px;
+    margin-bottom: 50px;
 }
 .rock{
-    margin-left: 35vw;
+    margin-left: 32vw;
     display: inline;
 }
 
 .scissor{
-    margin-left: 15vw;
+    margin-left: 12vw;
     display: inline;
 }
 
 .paper{
-    margin-left: 46.5vw;
+    margin-left: 42vw;
     margin-top: 11vh;
+}
+
+#result{
+    margin-left: 40vw;
+    color: #FFF;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3.9px;
 }
 
 #rock-btn{
@@ -127,7 +143,7 @@ body{
     float: right;
     color: white;
     padding: 5px 12px;
-    margin-left: 20px;
+    margin-left: 10px;
     margin-right: 20px;
     background-color:#8CC461;
     font-size: 21px;
@@ -136,4 +152,57 @@ body{
     border: 2px solid white;
     border-radius: 10px;
     cursor: pointer;
+}
+h2{
+    text-align: center;
+    color: #FFF;
+    font-size: 29px;
+    font-weight: 500;
+    padding: 20px 10px;
+}
+#popup-banner{
+    background-color: #004429;
+    width:22vw;
+    height: 26vw;
+    margin-left: 65vw;
+    padding: 5px 10px;
+    display: inline;
+    position: absolute;
+    border: 8px solid white;
+    border-radius: 15px;
+}
+
+li{
+    color: #FFFFFF;
+    list-style-type: square;
+    padding: 8px 5px;
+}
+#close-btn{
+    font-family: 'Dangrek';
+    font-size: 44px;
+    font-weight: 400;
+    color: white;
+    background-color: red;
+    padding: 2px 10px;
+    border: 5px solid white;
+    border-radius: 50px;
+    position: absolute;
+    margin-left: 20vw;
+    margin-bottom: 50px;
+    float: inline-start;
+    cursor: pointer;
+}
+
+#play-again{
+    color: #6B6B6B;
+    margin-top: 10px;
+    margin-left: 45vw;
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    padding: 10px 15px;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 10px;
 }
