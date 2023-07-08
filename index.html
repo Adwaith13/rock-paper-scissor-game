@@ -16,22 +16,23 @@
         <div class="computer-scorecard">
             <label id="comp-score">COMPUTER</label>
             <label id="comp-score">SCORE</label>
-            <p id="score-computer" value="0"></p>
+            <p id="score-computer"></p>
         </div>
         <div class="user-scorecard">
             <label id="user-score">USER</label>
             <label id="user-score">SCORE</label>
-            <p id="score-user" value="0"></p>
+            <p id="score-user"></p>
         </div>
    </div>
 
+   <span id="result"></span>
+   <button id="play-again" style="display: none;" onclick="handlePlayAgain()">PLAY AGAIN</button>
    <div class="play-area">
          <div class="rock">
              <button type="button" id="rock-btn">
                  <img src="rock.svg">
              </button>
         </div>
-
         <div class="scissor">
              <button type="button" id="scissor-btn">
                  <img src="scissor.svg">
@@ -44,11 +45,25 @@
              </button>
         </div>
    </div>  
-   <p id="result"></p>
+
    <a href="win.html">
-       <button type="button" id="next">NEXT</button>
+       <button type="button" id="next" style="display: none;">NEXT</button>
    </a>
+
    <button type="button" id="rules">RULES</button>
+
+   <div id="popup-banner" style="display: none;">
+    <button id="close-btn">X</button>
+    <div id="popup-content">
+      <h2>Game Rules</h2>
+      <ul>
+        <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+        <li>Agree ahead of time whether you'll count off "rock, paper, scissors, shoot" or just "rock, paper, scissors."</li>
+        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time.</li>
+        <li>If both players lay down the same hand, each player lays down another hand.</li>
+      </ul>
+    </div>
+  </div>
    
 <script src="script.js"></script>    
 </body>
