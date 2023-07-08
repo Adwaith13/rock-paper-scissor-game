@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Rock Paper Scissors Game</title>
 </head>
 <body>
     <label id="rock">ROCK</label><br>
     <br>
     <label id="paper">PAPER</label><br>
     <br>
-    <label id="scissor">SCISSOR</label>
+    <label id="scissor">SCISSORS</label>
    <div class="score-card">
         <div class="computer-scorecard">
             <label id="comp-score">COMPUTER</label>
@@ -23,8 +23,33 @@
             <label id="user-score">SCORE</label>
             <p id="score-user" value="0"></p>
         </div>
-    
    </div>
+
+   <div class="play-area">
+         <div class="rock">
+             <button type="button" id="rock-btn">
+                 <img src="rock.svg">
+             </button>
+        </div>
+
+        <div class="scissor">
+             <button type="button" id="scissor-btn">
+                 <img src="scissor.svg">
+             </button>
+        </div>
+
+        <div class="paper">
+             <button type="button" id="paper-btn">
+                 <img src="paper.svg">
+             </button>
+        </div>
+   </div>  
+   <p id="result"></p>
+   <a href="win.html">
+       <button type="button" id="next">NEXT</button>
+   </a>
+   <button type="button" id="rules">RULES</button>
+   
 <script src="script.js"></script>    
 </body>
 </html>
