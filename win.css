@@ -5,30 +5,34 @@
 body{
     background-color: #8CC461;
 }
-h1,h2{
+.text{
+    display: inline;
+    position: absolute;
     color: #FFF;
     text-align: center;
+    margin-top: 65vh;
+    margin-left: 32vw;
     font-family: 'Roboto';
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
     letter-spacing: 9.1px;
 }
 #trophy{
     position: absolute;
-    margin-top: 40vh;
+    margin-top: 30vh;
     margin-left: 40vw;
 }
 
 #stars{
     position: absolute;
-    margin-top: 25vh;
+    margin-top: 15vh;
     margin-left: 30vw;
 }
 
 #play-again{
     color: #6B6B6B;
-    margin-top: 20px;
-    margin-left: 43vw;
+    margin-top: 80vh;
+    margin-left: 42vw;
     font-family: Roboto;
     font-size: 15px;
     font-weight: 600;
